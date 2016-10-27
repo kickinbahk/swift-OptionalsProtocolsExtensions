@@ -10,19 +10,20 @@ import UIKit
 
 class ShowText: UIViewController {
 
+  @IBOutlet weak var showUserTextLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    showUserTextLabel.text = "Tap the Plus button in the Nav to Change the text"
     // Do any additional setup after loading the view, typically from a nib.
   }
-  
-  func show() {
-    
-  }
-  
-  @IBAction cancel() {
-    dismiss
-  }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "AddText" {
+      let updateText: UpdateText = segue.destination as! UpdateText
+      updateText.delegate = self
+    }
+  }
   
   
   
@@ -36,3 +37,8 @@ class ShowText: UIViewController {
 
 }
 
+extension ShowText: UpdateTextDelegate {
+  func sendText(didFinishUpdating userText: String) {
+    showUserTextLabel.text = userText
+  }
+}
