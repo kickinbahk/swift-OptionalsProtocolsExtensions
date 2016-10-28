@@ -24,6 +24,13 @@ class UpdateText: UIViewController {
     userAddTextField.becomeFirstResponder()
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    userAddTextField.delegate = self
+    updateButton.adjustsImageWhenDisabled = true
+    updateButton.isEnabled = false
+  }
+  
   
   @IBAction func cancel() {
     dismiss(animated: true, completion: nil)
@@ -38,11 +45,24 @@ class UpdateText: UIViewController {
       }
     }
   }
-
   
 }
 
+
 extension UpdateText: UITextFieldDelegate {
-  
+
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool {
+    let oldText = textField.text! as NSString
+    let newText = oldText.replacingCharacters(in: range, with: string) as NSString
+    updateButton.isEnabled = ((newText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines) as NSString).length > 0)
+    
+    return true
+  }
+
+  func textFieldShouldClear(_ textField: UITextField) -> Bool {
+    updateButton.isEnabled = false
+    return true
+  }
 }
 
