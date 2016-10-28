@@ -69,5 +69,10 @@ extension UpdateText: UITextFieldDelegate {
     updateButton.alpha = 0.5
     return true
   }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    update()
+    return true
+  }
 }
 
