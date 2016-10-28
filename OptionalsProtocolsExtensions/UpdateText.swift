@@ -58,15 +58,17 @@ extension UpdateText: UITextFieldDelegate {
     updateButton.isEnabled = ((newText.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines) as NSString).length > 0)
     
     if updateButton.isEnabled {
-      updateButton.alpha = 1.0
+      let alphaTransparency: CGFloat = 1.0
+      updateButton.alpha = alphaTransparency
     }
     
     return true
   }
 
   func textFieldShouldClear(_ textField: UITextField) -> Bool {
+    let alphaTransparency: CGFloat = 0.5
     updateButton.isEnabled = false
-    updateButton.alpha = 0.5
+    updateButton.alpha = alphaTransparency
     return true
   }
   
