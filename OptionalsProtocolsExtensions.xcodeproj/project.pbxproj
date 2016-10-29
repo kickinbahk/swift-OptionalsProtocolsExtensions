@@ -24,6 +24,8 @@
 		EB5CF0FD1DC131500006B51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB5CF0FF1DC131500006B51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB60BF1D1DC23F17002B2D29 /* UpdateText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateText.swift; sourceTree = "<group>"; };
+		EB6152931DC39547007C721E /* Optionals1-if.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Optionals1-if.playground"; sourceTree = "<group>"; };
+		EBFA31E41DC41FB1009DE8AD /* Optionals2-force.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Optionals2-force.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,8 @@
 				EB5CF0FC1DC131500006B51B /* LaunchScreen.storyboard */,
 				EB5CF0FF1DC131500006B51B /* Info.plist */,
 				EB60BF1D1DC23F17002B2D29 /* UpdateText.swift */,
+				EB6152931DC39547007C721E /* Optionals1-if.playground */,
+				EBFA31E41DC41FB1009DE8AD /* Optionals2-force.playground */,
 			);
 			path = OptionalsProtocolsExtensions;
 			sourceTree = "<group>";
