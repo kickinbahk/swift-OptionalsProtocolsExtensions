@@ -25,8 +25,6 @@ class ShowText: UIViewController {
     }
   }
   
-  
-  
   // MARK: - Memory Warning
   
   override func didReceiveMemoryWarning() {

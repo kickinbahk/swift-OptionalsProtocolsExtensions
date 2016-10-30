@@ -1,3 +1,5 @@
+// Forced Unwrapping
+
 import UIKit
 
 var optional1: Int? = nil
@@ -12,6 +14,7 @@ func addFour(numberToAdd num: Int) -> Int {
 // addFour(optional1)
 
 func unwrapOptional(varToUnwrap num: Int?) -> Int {
+  print(num)
   return num!
 }
 

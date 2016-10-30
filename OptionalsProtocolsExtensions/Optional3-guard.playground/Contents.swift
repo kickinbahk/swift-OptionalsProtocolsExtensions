@@ -1,4 +1,4 @@
-// Conditional Unwrapping
+// Guard Unwrapping
 
 import UIKit
 
@@ -11,18 +11,16 @@ func addFour(numberToAdd num: Int) -> Int {
 }
 
 
+// addFour(optional1)
+
 func unwrapOptional(varToUnwrap num: Int?) -> Int {
-  if let unwrappedNum = num {
-    return unwrappedNum
-  } else {
-    let noValue = 0
-    return noValue
-  }
+  guard let unwrappedNum = num else { return 0 }
+  return unwrappedNum
 }
 
 func giveNumberValue(_ number: Int?) -> Int {
-    let newNumber = generateRandomNumber()
-    return newNumber
+  let newNumber = generateRandomNumber()
+  return newNumber
 }
 
 
